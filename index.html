@@ -283,7 +283,24 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="contactForm" action="https://formspree.io/f/xgepjrvz" method="POST">
+                        <form
+                          action="https://formspree.io/f/xgepjrvz"
+                          method="POST"
+                        >
+                          <label>
+                            Your email:
+                            <input type="text" name="_replyto">
+                          </label>
+                          <label>
+                            Your message:
+                            <textarea name="message"></textarea>
+                          </label>
+
+                          <!-- your other form fields go here -->
+
+                          <button type="submit">Send</button>
+                        </form>
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Nome</label>
@@ -294,14 +311,14 @@
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Email</label>
-                                    <input class="form-control" name="_replyto" id="email" type="text" placeholder="Email" required="required" data-validation-required-message="Please enter your email address." />
+                                    <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Please enter your email address." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls mb-0 pb-2">
                                     <label>Telefono</label>
-                                    <input class="form-control" id="phone" type="text" placeholder="Telefono" required="required" data-validation-required-message="Please enter your phone number." />
+                                    <input class="form-control" id="phone" type="tel" placeholder="Telefono" required="required" data-validation-required-message="Please enter your phone number." />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
